@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-tbone'
 Plug 'tpope/vim-commentary'  " use gc/gcc for commenting/uncomenting
 Plug 'vim-syntastic/syntastic'
+Plug 'rust-lang/rust.vim'
 
 " initialize plugin system
 call plug#end()
@@ -30,11 +31,9 @@ if has("unix")
 endif
 
 if has('gui_running')
-  " set gfn=DejaVu\ Sans\ Mono\ 12
-  " set gfn=Ubuntu\ Mono\ 12
-  set gfn=PT\ Mono\ 13
-  set guioptions-=T   " remove toolbar
-  set guioptions-=r   " remove right-hand scroll bar
+  set gfn=PT\ Mono\ 10
+  set guioptions-=T  " remove toolbar
+  set guioptions-=r  " remove right-hand scroll bar
 else
   set t_Co=256
 endif
@@ -185,7 +184,6 @@ au FileType python setl
 autocmd FileType text setl
   \ textwidth=78
   \ colorcolumn=79
-
 
 " convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
