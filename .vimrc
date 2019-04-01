@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'jltf/vim-sensible'
 Plug 'davidhalter/jedi-vim'
+" Plug 'ambv/black'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -73,11 +74,11 @@ set mouse=a
 
 set clipboard=unnamed,unnamedplus  " copy to "+ register
 
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
 
-nnoremap <silent><F3>   :set fileformat=unix<cr>
-nnoremap <silent><S-F3> :set fileformat=dos<cr>
-nnoremap <silent><F4>   :set fileencoding=utf8<cr>
-nnoremap <silent><S-F4> :set fileencoding=cp1251<cr>
+set undofile  " Maintain undo history between sessions
 
 set encoding=utf-8              " set char set translation encoding
 set termencoding=utf-8          " set terminal encoding
@@ -85,6 +86,10 @@ set fileencoding=utf-8          " set save encoding
 set fileencodings=utf-8,cp1251  " considered encodings
 set ffs=unix,dos                " use unix as the standard file type
 
+nnoremap <silent><F3>   :set fileformat=unix<cr>
+nnoremap <silent><S-F3> :set fileformat=dos<cr>
+nnoremap <silent><F4>   :set fileencoding=utf8<cr>
+nnoremap <silent><S-F4> :set fileencoding=cp1251<cr>
 
 let mapleader = ','
 
@@ -178,7 +183,6 @@ au FileType python setl
   \ tabstop=4
   \ softtabstop=4
   \ shiftwidth=4
-  \ tw=79
   \ colorcolumn=80,120
 
 autocmd FileType text setl
