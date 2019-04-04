@@ -59,6 +59,11 @@ set timeoutlen=700   " the time in milliseconds that is waited for a key code
 set cursorcolumn     " highlight current cursor column
 
 set expandtab        " expand tab to spaces
+set tabstop=4        " number of spaces that a tab in the file counts for
+set softtabstop=4    " number of spaces that a tab counts for while
+                     " performing editing operations like inserting tab ar
+                     " using backspace
+set shiftwidth=4     " number of spaces to use for each step of (auto)indent
 set ignorecase       " ignore case in search patterns
 set wrap             " string wraping
 set hlsearch         " highlight search
@@ -180,9 +185,6 @@ highlight ExtraWhitespace ctermbg=1 guibg=red
 " autocmd BufRead,BufNewFile,InsertLeave * match ExtraWhitespace /\s\+$/
 
 au FileType python setl
-  \ tabstop=4
-  \ softtabstop=4
-  \ shiftwidth=4
   \ colorcolumn=80,120
 
 autocmd FileType text setl
