@@ -191,6 +191,8 @@ autocmd FileType text setl
   \ textwidth=78
   \ colorcolumn=79
 
+autocmd FileType markdown setl colorcolumn=79
+
 " convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " only define it when not defined already.
