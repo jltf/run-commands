@@ -46,7 +46,7 @@ set hidden  " switch between buffers without saving
             " (hide buffers when they are abandoned)
 
 " status line format:
-set stl=%L\ %f%m%r%h%w\ %y\ %4{&ff}\/%{&fenc}%=%2c%V\ %3p%%
+set statusline=%L\ %f%m%r%h%w\ %y\ %4{&ff}\/%{&fenc}%=%2c%V\ %3p%%
 
 set listchars=tab:»·,trail:· " symbols for witespace characters
 set list             " make whitespace characters to be visible
@@ -84,6 +84,8 @@ set directory=/tmp//
 set undodir=/tmp//
 
 set undofile  " Maintain undo history between sessions
+
+set cryptmethod=blowfish2  " set default encryption method
 
 set encoding=utf-8              " set char set translation encoding
 set termencoding=utf-8          " set terminal encoding
