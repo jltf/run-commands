@@ -76,6 +76,7 @@ set lazyredraw       " do not redraw screen while executing macros
 set history=64       " how many lines of history to remember
 set undolevels=128   " maximum number of changes that can be undone
 set mouse=a
+set ttymouse=sgr     " mouse control in alacritty terminal
 
 set clipboard=unnamed,unnamedplus  " copy to "+ register
 
